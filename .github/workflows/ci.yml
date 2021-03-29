@@ -12,6 +12,7 @@ jobs:
 
       - name: Validate and Build Docker App
         run: |
+          export DOCKER_CLI_EXPERIMENTAL=enabled
           docker version
           sudo rm /etc/docker/daemon.json
           sudo bash -c 'echo "{\"experimental\": true}" > /etc/docker/daemon.json'
