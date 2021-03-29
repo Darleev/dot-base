@@ -12,6 +12,7 @@ jobs:
 
       - name: Validate and Build Docker App
         run: |
+          echo "123"
           sudo rm /etc/docker/daemon.json
           sudo bash -c 'echo "{\"experimental\": true}" > /etc/docker/daemon.json'
           sudo service docker restart
