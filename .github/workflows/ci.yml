@@ -15,6 +15,7 @@ jobs:
           docker version
           sudo rm /etc/docker/daemon.json
           sudo bash -c 'echo "{\"experimental\": true}" > /etc/docker/daemon.json'
+          cat /etc/docker/daemon.json
           sudo service docker restart
           docker version -f '{{.Server.Experimental}}'
 
