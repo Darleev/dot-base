@@ -17,7 +17,7 @@ jobs:
           sudo bash -c 'echo "{\"experimental\": true}" > /etc/docker/daemon.json'
           cat /etc/docker/daemon.json
           sudo service docker restart
-          docker version -f '{{.Server.Experimental}}'
+          docker version
 
           docker app validate dot-base.dockerapp
           docker app build dot-base.dockerapp -t ghcr.io/dot-base/dot-base:latest
