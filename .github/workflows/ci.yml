@@ -5,7 +5,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      DOCKER_CLI_EXPERIMENTAL: enabled
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
