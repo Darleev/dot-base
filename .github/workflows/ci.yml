@@ -18,6 +18,6 @@ jobs:
           cat /etc/docker/daemon.json
           sudo service docker restart
           docker version
-          docker app init --single-file hello-world
+          docker app init
           docker app validate dot-base.dockerapp
           docker app build dot-base.dockerapp -t ghcr.io/dot-base/dot-base:latest
